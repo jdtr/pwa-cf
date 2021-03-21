@@ -1,0 +1,8 @@
+<ul>
+    <li *ngFor="let list of listS.lists | async" @enterState>
+        <a [routerLink]="urlLists(list)">
+            {{ list.title }}
+            <span>0</span>
+        </a>
+    </li>
+</ul>

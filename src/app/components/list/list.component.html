@@ -1,0 +1,3 @@
+<creator-todo [id]="listId"></creator-todo>
+
+<todo-card *ngFor="let item of todos | async; trackBy: trackTodoObjects" [todo]="todos" [listId]="listId"></todo-card>

@@ -1,0 +1,15 @@
+<div class="text-right">
+    <button (click)="toggleForm()">{{ label() }}<i class="fa {{icon()}}"></i> </button>
+</div>
+
+<form action="" [@openClose]="formState">
+    <input type="text" placeholder="What are you going to do?" [(ngModel)]="todo.content" min="3" required>
+    <textarea placeholder="additional information" [(ngModel)]="todo.description"></textarea>
+    <div class="date-time-picker">
+        <!-- <input placeholder="Deadline(optional)" [owlDateTime]="dt"
+            [owlDateTimeTrigger]="dt" [(ngModel)]="todo.deadline">
+        <owl-date-time #dt></owl-date-time> -->
+    </div>
+
+    <button type="button" (click)="save()"><i class="fas fa-save" aria-hidden="true"></i> Save</button>
+</form>

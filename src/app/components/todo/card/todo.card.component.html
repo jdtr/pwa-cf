@@ -1,0 +1,11 @@
+<article 
+    [@pressAnimation]="press" 
+    [@statusAnimation]="todo.status"
+    (mousedown)="press = 'down'"
+    (mouseup)="press = 'up'"
+    (press)="press = 'down'"
+    (pressUp)="press = 'up'"
+    (swipeLeft)="completed()">
+    <h4>{{ todo.content }}</h4>
+    <p *ngIf="todo.description">{{ todo.description }}</p>
+</article>
